@@ -1,4 +1,4 @@
-{% set version = "0.7.3" %}
+{% set version = "0.8.0" %}
 
 package:
   name: glueviz
@@ -7,7 +7,7 @@ package:
 source:
   fn: glueviz-{{version}}.tar.gz
   url: https://pypi.io/packages/source/g/glueviz/glueviz-{{version}}.tar.gz
-  md5: 27d246df1e69e1c9e05a474c714cc4af
+  md5: 8cdb3db5001311cf77cbd4071ef9ac66
 
 build:
   number: 0
