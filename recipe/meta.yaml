@@ -18,7 +18,7 @@ requirements:
 
   build:
     - python
-    - setuptools
+    - vs2015_runtime 14.00.23026.0 0  # [win and py35]
 
   run:
     - python
@@ -35,6 +35,7 @@ requirements:
     - xlrd
     - scikit-image
     - python.app  # [osx]
+    - vs2015_runtime 14.00.23026.0 0  # [win and py35]
 
 test:
   requires:
