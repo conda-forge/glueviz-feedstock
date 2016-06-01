@@ -10,7 +10,7 @@ source:
   md5: a14b261b391643c0c34253bd8281fa12
 
 build:
-  number: 0
+  number: 1
   script: python setup.py install --single-version-externally-managed --record record.txt
   osx_is_app: True
 
@@ -18,7 +18,6 @@ requirements:
 
   build:
     - python
-    - vs2015_runtime 14.00.23026.0 0  # [win and py35]
 
   run:
     - python
@@ -35,7 +34,6 @@ requirements:
     - xlrd
     - scikit-image
     - python.app  # [osx]
-    - vs2015_runtime 14.00.23026.0 0  # [win and py35]
 
 test:
   requires:
