@@ -56,6 +56,7 @@ app:
 about:
   home: http://glueviz.org
   license: BSD 3-Clause
+  license_file: LICENSE
   summary: Multi-dimensional linked data exploration
 
 extra:
