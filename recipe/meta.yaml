@@ -10,7 +10,7 @@ source:
   md5: 92dd7de2621a6ab6861cc9b689e86c3e
 
 build:
-  number: 0
+  number: 1
   script: python setup.py install --single-version-externally-managed --record record.txt
   osx_is_app: True
 
@@ -18,6 +18,7 @@ requirements:
 
   build:
     - python
+    - setuptools
 
   run:
     - python
@@ -29,11 +30,12 @@ requirements:
     - ipykernel
     - h5py
     - pandas
-    - pyqt
+    - pyqt 4.*
     - qtconsole
     - xlrd
     - scikit-image
     - python.app  # [osx]
+    - setuptools
 
 test:
   requires:
@@ -54,6 +56,7 @@ app:
 about:
   home: http://glueviz.org
   license: BSD 3-Clause
+  license_file: LICENSE
   summary: Multi-dimensional linked data exploration
 
 extra:
