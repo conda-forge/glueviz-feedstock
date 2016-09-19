@@ -10,7 +10,7 @@ source:
   md5: 92dd7de2621a6ab6861cc9b689e86c3e
 
 build:
-  number: 0
+  number: 1
   script: python setup.py install --single-version-externally-managed --record record.txt
   osx_is_app: True
 
@@ -29,7 +29,7 @@ requirements:
     - ipykernel
     - h5py
     - pandas
-    - pyqt
+    - pyqt 4.*
     - qtconsole
     - xlrd
     - scikit-image
