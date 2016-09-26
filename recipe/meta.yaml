@@ -43,6 +43,8 @@ test:
     - pytest
   imports:
     - glue
+    - glue.core
+    - glue.app.qt
   commands:
     - glue --version
     - glue-deps list
