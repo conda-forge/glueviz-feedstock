@@ -38,6 +38,7 @@ requirements:
     - setuptools
     - dill
     - plotly
+    - qtpy
 
 test:
   requires:
