@@ -1,4 +1,4 @@
-{% set version = "0.8.2" %}
+{% set version = "0.9.0" %}
 
 package:
   name: glueviz
@@ -7,10 +7,10 @@ package:
 source:
   fn: glueviz-{{version}}.tar.gz
   url: https://pypi.io/packages/source/g/glueviz/glueviz-{{version}}.tar.gz
-  md5: 92dd7de2621a6ab6861cc9b689e86c3e
+  md5: 34b4923e4e2441a95b1830ede26ddca2
 
 build:
-  number: 1
+  number: 0
   script: python setup.py install --single-version-externally-managed --record record.txt
   osx_is_app: True
 
@@ -30,12 +30,14 @@ requirements:
     - ipykernel
     - h5py
     - pandas
-    - pyqt 4.*
+    - pyqt <=4.11.3
     - qtconsole
     - xlrd
     - scikit-image
     - python.app  # [osx]
     - setuptools
+    - dill
+    - plotly
 
 test:
   requires:
