@@ -30,7 +30,12 @@ requirements:
     - ipykernel
     - h5py
     - pandas
-    - pyqt <=4.11.3
+
+    # The conda-forge version of PyQt 4.11.4 is currently broken because
+    # it doesn't include session-related functionality, so we disallow
+    # this version for now.
+    - pyqt !=4.11.4
+
     - qtconsole
     - xlrd
     - scikit-image
