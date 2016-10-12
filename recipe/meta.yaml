@@ -10,7 +10,7 @@ source:
   md5: 34b4923e4e2441a95b1830ede26ddca2
 
 build:
-  number: 0
+  number: 1
   script: python setup.py install --single-version-externally-managed --record record.txt
   osx_is_app: True
 
@@ -21,34 +21,38 @@ requirements:
     - setuptools
 
   run:
+
+    # The following is needed to make sure that the package works as a GUI
+    # application (glue needs to be run with python.app, not python)
+    - python.app  # [osx]
+
+    # Required dependencies
     - python
     - numpy
-    - scipy
-    - matplotlib
-    - astropy
-    - ipython
-    - ipykernel
-    - h5py
     - pandas
+    - astropy
+    - matplotlib
+    - qtpy
+    - setuptools
 
     # The conda-forge version of PyQt 4.11.4 is currently broken because
     # it doesn't include session-related functionality, so we disallow
     # this version for now.
     - pyqt !=4.11.4
 
-    - qtconsole
-    - xlrd
-    - scikit-image
-    - python.app  # [osx]
-    - setuptools
+    # Optional dependencies (defined in ``extras_require``)
     - dill
+    - h5py
+    - scipy
+    - scikit-image
+    - ipython
+    - ipykernel
+    - qtconsole
     - plotly
-    - qtpy
+    - xlrd
+    - glue-vispy-viewers >=0.5
 
 test:
-  requires:
-    - mock
-    - pytest
   imports:
     - glue
     - glue.core
