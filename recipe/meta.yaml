@@ -10,7 +10,7 @@ source:
   md5: 34b4923e4e2441a95b1830ede26ddca2
 
 build:
-  number: 1
+  number: 2
   script: python setup.py install --single-version-externally-managed --record record.txt
   osx_is_app: True
 
@@ -37,8 +37,12 @@ requirements:
 
     # The conda-forge version of PyQt 4.11.4 is currently broken because
     # it doesn't include session-related functionality, so we disallow
-    # this version for now.
-    - pyqt !=4.11.4
+    # this version for now, unless on Windows and Python 3.5, for which
+    # the faulty 4.11.4 build has been removed (this was removed because
+    # the only PyQt4 version in defaults is 4.11.4, so by doing !=4.11.4
+    # there we'd be forcing PyQt5 (which some glue plugins won't work with)
+    - pyqt !=4.11.4  # [not (win and py35)]
+    - pyqt  # [win and py35]
 
     # Optional dependencies (defined in ``extras_require``)
     - dill
