@@ -10,7 +10,7 @@ source:
   md5: 34b4923e4e2441a95b1830ede26ddca2
 
 build:
-  number: 2
+  number: 3
   script: python setup.py install --single-version-externally-managed --record record.txt
   osx_is_app: True
 
@@ -32,14 +32,14 @@ requirements:
     - pandas
     - astropy
     - matplotlib
-    - qtpy
+    - qt 4.8.*
     - setuptools
 
     # The conda-forge version of Qt 4.11.4 is currently broken because
     # it doesn't include session-related functionality, so we disallow
     # this version for now.
-    - pyqt !=4.11.4  # [linux]
-    - pyqt  # [not linux]
+    - pyqt 4.11.* 4.11.*  # [linux]
+    - pyqt 4.11.*  # [not linux]
 
     # Optional dependencies (defined in ``extras_require``)
     - dill
@@ -48,7 +48,7 @@ requirements:
     - scikit-image
     - ipython
     - ipykernel
-    - qtconsole
+    - qt 4.8.*
     - plotly
     - xlrd
     - glue-vispy-viewers >=0.5
