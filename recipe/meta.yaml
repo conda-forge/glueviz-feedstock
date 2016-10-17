@@ -30,9 +30,9 @@ requirements:
     - python
     - numpy
     - pandas
-    - astropy
+    - astropy >=1
     - matplotlib
-    - qtpy
+    - qtpy >=1.1.1
     - setuptools
 
     # The conda-forge version of Qt 4.11.4 is currently broken because
@@ -46,7 +46,7 @@ requirements:
     - h5py
     - scipy
     - scikit-image
-    - ipython
+    - ipython >=1
     - ipykernel
     - qtconsole
     - plotly
