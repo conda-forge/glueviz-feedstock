@@ -33,7 +33,6 @@ conda search glueviz --channel conda-forge
 ```
 
 
-
 About conda-forge
 =================
 
