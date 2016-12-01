@@ -10,7 +10,7 @@ source:
   md5: 365887017580e243fb008d8109f2bc16
 
 build:
-  number: 0
+  number: 1
   script: python setup.py install --single-version-externally-managed --record record.txt
   osx_is_app: True
 
@@ -32,7 +32,7 @@ requirements:
     - pandas >=0.14
     - astropy >=1
     - matplotlib >=1.4
-    - qtpy >=1.1.1
+    - qt 4.8.*
     - setuptools >=1.0
     - pyqt 4.11.*
 
@@ -43,7 +43,7 @@ requirements:
     - scikit-image
     - ipython >=1
     - ipykernel
-    - qtconsole
+    - qt 4.8.*
     - plotly
     - xlrd
     - glue-vispy-viewers >=0.5
