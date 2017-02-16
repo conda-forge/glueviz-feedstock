@@ -12,6 +12,10 @@ source:
 build:
   number: 0
   script: python setup.py install --single-version-externally-managed --record record.txt
+  entry_points:
+    - glue = glue.main:main
+    - glue-config = glue.config_gen:main
+    - glue-deps = glue._deps:main
   osx_is_app: True
 
 requirements:
