@@ -10,7 +10,7 @@ source:
   md5: 1bdd8b6925fb028938ee3affd7b95059
 
 build:
-  number: 0
+  number: 1
   script: python setup.py install --single-version-externally-managed --record record.txt
   entry_points:
     - glue = glue.main:main
