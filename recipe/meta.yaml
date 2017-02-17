@@ -52,6 +52,10 @@ requirements:
     - scipy
     - scikit-image
     - plotly
+    
+    # Temporary: the scikit-image conda package is missing the dask dependency
+    # so we add it here for now
+    - dask
 
 test:
   imports:
