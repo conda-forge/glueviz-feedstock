@@ -1,6 +1,9 @@
 # NOTE: this is a meta-package that includes the core glue code as well as stable
 # plugins. This is the main conda package we want in the Navigator, so we add the
-# app: entry here and not in the glue-core package.
+# app: entry here and not in the glue-core package. Even though glueviz is a
+# Python package on PyPI, and has a setup.py file, we don't include a build command
+# below since the only purpose of that command is to trigger the installation of the
+# dependencies.
 
 {% set version = "0.10.1" %}
 
@@ -14,24 +17,15 @@ source:
   md5: abcb117e102ae9cb00c5dd1bd784c5f3
 
 build:
-  number: 1
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  number: 2
 
 requirements:
-
-  build:
-    - python
-    - setuptools
 
   run:
     - glue-core >=0.10.1
     - glue-vispy-viewers >=0.7.2
 
 test:
-  imports:
-    - glue
-    - glue.core
-    - glue.app.qt
   commands:
     - glue --version
     - glue-deps list
