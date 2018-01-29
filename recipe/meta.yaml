@@ -14,7 +14,7 @@ package:
 source:
   fn: glueviz-{{version}}.tar.gz
   url: https://pypi.io/packages/source/g/glueviz/glueviz-{{version}}.tar.gz
-  sha256: 354f34ffe5e23b718a60279940f3a3123cacfe0eba6964d6cc07bd70e43e257b
+  sha256: cd66ebcaada2c897bf471ca88d1169147daf2fb8c2fe5299ff2bd74120b37ff2
 
 build:
   number: 0
