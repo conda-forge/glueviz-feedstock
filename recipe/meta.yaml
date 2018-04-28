@@ -5,7 +5,7 @@
 # below since the only purpose of that command is to trigger the installation of the
 # dependencies.
 
-{% set version = "0.12.4" %}
+{% set version = "0.13.0" %}
 
 package:
   name: glueviz
@@ -14,7 +14,7 @@ package:
 source:
   fn: glueviz-{{version}}.tar.gz
   url: https://pypi.io/packages/source/g/glueviz/glueviz-{{version}}.tar.gz
-  sha256: cd66ebcaada2c897bf471ca88d1169147daf2fb8c2fe5299ff2bd74120b37ff2
+  sha256: efc3841e02c912495aa2fdfe36b22ff8faea9a74895b765b88a83bceab853177
 
 build:
   number: 0
