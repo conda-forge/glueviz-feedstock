@@ -14,14 +14,16 @@ Summary: Multi-dimensional linked data exploration
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/glueviz-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/glueviz-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/glueviz-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/glueviz-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/glueviz-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/glueviz-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/glueviz-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/glueviz-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/glueviz-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/glueviz-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/glueviz-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/glueviz-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/glueviz/badges/version.svg)](https://anaconda.org/conda-forge/glueviz)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/glueviz/badges/downloads.svg)](https://anaconda.org/conda-forge/glueviz)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-glueviz-green.svg)](https://anaconda.org/conda-forge/glueviz) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/glueviz.svg)](https://anaconda.org/conda-forge/glueviz) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/glueviz.svg)](https://anaconda.org/conda-forge/glueviz) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/glueviz.svg)](https://anaconda.org/conda-forge/glueviz) |
 
 Installing glueviz
 ==================
