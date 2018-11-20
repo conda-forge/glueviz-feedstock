@@ -1,4 +1,4 @@
-# NOTE: this is a meta-package that includes the core glue code as well as stable
+# NOTE: this is a meta-package that includes the core glue-core code as well as stable
 # plugins. This is the main conda package we want in the Navigator, so we add the
 # app: entry here and not in the glue-core package. Even though glueviz is a
 # Python package on PyPI, and has a setup.py file, we don't include a build command
