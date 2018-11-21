@@ -1,11 +1,11 @@
-# NOTE: this is a meta-package that includes the core glue code as well as stable
+# NOTE: this is a meta-package that includes the core glue-core code as well as stable
 # plugins. This is the main conda package we want in the Navigator, so we add the
 # app: entry here and not in the glue-core package. Even though glueviz is a
 # Python package on PyPI, and has a setup.py file, we don't include a build command
 # below since the only purpose of that command is to trigger the installation of the
 # dependencies.
 
-{% set version = "0.13.3" %}
+{% set version = "0.14.0" %}
 
 package:
   name: glueviz
@@ -14,7 +14,7 @@ package:
 source:
   fn: glueviz-{{version}}.tar.gz
   url: https://pypi.io/packages/source/g/glueviz/glueviz-{{version}}.tar.gz
-  sha256: 80e617608e5937409a87ffe95285f338eee8824dbff1b3692c9733f7d76d752b
+  sha256: 8b084f94e429048074f8f2e26243c104a2ce64e2d501529e431a09fdedf66e83
 
 build:
   number: 0
@@ -22,8 +22,8 @@ build:
 
 requirements:
   run:
-    - glue-core >=0.13.3
-    - glue-vispy-viewers >=0.10
+    - glue-core >=0.14
+    - glue-vispy-viewers >=0.11
 
 test:
   commands:
