@@ -18,12 +18,17 @@ source:
 
 build:
   number: 0
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
+  build:
+    - python
+    - pip
+    - setuptools >=30.3
+    - setuptools_scm
   run:
-    - glue-core >=0.14
-    - glue-vispy-viewers >=0.11
+    - glue-core >=0.15.3
+    - glue-vispy-viewers >=0.12.2
 
 test:
   commands:
