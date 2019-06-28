@@ -5,7 +5,7 @@
 # below since the only purpose of that command is to trigger the installation of the
 # dependencies.
 
-{% set version = "0.14.0" %}
+{% set version = "0.15.1" %}
 
 package:
   name: glueviz
@@ -14,16 +14,21 @@ package:
 source:
   fn: glueviz-{{version}}.tar.gz
   url: https://pypi.io/packages/source/g/glueviz/glueviz-{{version}}.tar.gz
-  sha256: 8b084f94e429048074f8f2e26243c104a2ce64e2d501529e431a09fdedf66e83
+  sha256: 4b3f9b6f5956ca3de23759ccda51a05ef485fb64d80a19e2f057dcd35040bed2
 
 build:
   number: 0
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
+  build:
+    - python
+    - pip
+    - setuptools >=30.3
+    - setuptools_scm
   run:
-    - glue-core >=0.14
-    - glue-vispy-viewers >=0.11
+    - glue-core >=0.15.3
+    - glue-vispy-viewers >=0.12.2
 
 test:
   commands:
