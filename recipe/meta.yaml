@@ -19,6 +19,7 @@ source:
 build:
   number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
+  skip: true  # [py<37]
 
 requirements:
   host:
@@ -28,8 +29,8 @@ requirements:
     - setuptools_scm
   run:
     - python
-    - glue-core >=1.0.0
-    - glue-vispy-viewers >=1.0.0
+    - glue-core >=1.1.0
+    - glue-vispy-viewers >=1.0.3
 
 test:
   commands:
@@ -44,7 +45,7 @@ app:
 
 about:
   home: http://glueviz.org
-  license: BSD 3-Clause
+  license: BSD-3-Clause
   license_file: LICENSE
   summary: Multi-dimensional linked data exploration
 
