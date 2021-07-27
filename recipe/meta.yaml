@@ -5,7 +5,7 @@
 # below since the only purpose of that command is to trigger the installation of the
 # dependencies.
 
-{% set version = "1.0.0" %}
+{% set version = "1.1.0" %}
 
 package:
   name: glueviz
@@ -14,11 +14,12 @@ package:
 source:
   fn: glueviz-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/g/glueviz/glueviz-{{ version }}.tar.gz
-  sha256: 89db2b2331eb74f221251b129f6ce6b507f14101caea993ee0926ceeeaaf68ab
+  sha256: e9d52ce7b18249c8885a07ec1e6615c619d80a4a2887852720ee2bc5a0f8262e
 
 build:
-  number: 2
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
+  skip: true  # [py<37]
 
 requirements:
   host:
@@ -28,8 +29,8 @@ requirements:
     - setuptools_scm
   run:
     - python
-    - glue-core >=1.0.0
-    - glue-vispy-viewers >=1.0.0
+    - glue-core >=1.1.0
+    - glue-vispy-viewers >=1.0.3
 
 test:
   commands:
@@ -44,7 +45,7 @@ app:
 
 about:
   home: http://glueviz.org
-  license: BSD 3-Clause
+  license: BSD-3-Clause
   license_file: LICENSE
   summary: Multi-dimensional linked data exploration
 
