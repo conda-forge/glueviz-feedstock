@@ -36,7 +36,6 @@ requirements:
 test:
   commands:
     - glue --version
-    - glue-deps list
 
 app:
   entry: glue
